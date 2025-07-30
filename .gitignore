@@ -1,0 +1,20 @@
+# Ignorar archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar logs
+*.log
+
+# Ignorar archivos temporales de editores
+*.swp
+*.swo
+
+# Ignorar carpetas de dependencias si usas Node.js (futuro)
+node_modules/
+
+# Ignorar resultados de compilación (si decides usar herramientas)
+dist/
+build/
+
+# Ignorar entorno de desarrollo
+.env
