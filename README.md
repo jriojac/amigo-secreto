@@ -47,4 +47,4 @@ git clone https://github.com/jriojac/amigo-secreto.git
 ## 📄 Licencia
 
 Este proyecto está licenciado bajo la **Licencia MIT**.  
-Consulta el archivo [LICENSE](LICENSE) para más información.
+Consulta el archivo LICENSE para más información.
