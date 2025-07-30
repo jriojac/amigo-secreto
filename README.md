@@ -38,7 +38,7 @@ git clone https://github.com/jriojac/amigo-secreto.git
 
 ## 👩‍💻 Autora
 
-**Jacqueline Rioja**  
+**Jacqueline Rioja y ALURA LATAM**  
 📫 Contacto: jriojac@gmail.com  
 🔗 GitHub: https://github.com/jriojac
 
