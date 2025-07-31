@@ -53,7 +53,9 @@ function mostrar() {
 
 function sortear() {
   const resultado = document.getElementById('resultado');
+  const mensaje = document.getElementById('mensaje');
   resultado.innerHTML = '';
+  mensaje.textContent = '';
 
   const indice = Math.floor(Math.random() * lista.length);
   const ganador = lista[indice];
@@ -62,6 +64,12 @@ function sortear() {
 
   document.getElementById('btnReiniciar').disabled = false;
   document.getElementById('btnSortear').disabled = true;
+  
+
+  document.getElementById('estadoJuego').textContent = '🎁 El juego está cerrado. Reinicie para volver a jugar.';
+  bloquearInput();
+
+
 }
 
 function reiniciarJuego() {
@@ -75,9 +83,21 @@ function reiniciarJuego() {
 
   document.getElementById('btnReiniciar').disabled = true;
   document.getElementById('btnSortear').disabled = true;
+
+  document.getElementById('estadoJuego').textContent = '';
+  desbloquearInput();
 }
 
 function actualizarBotones() {
   const sortearBtn = document.getElementById('btnSortear');
   sortearBtn.disabled = lista.length < 2;
+}
+function bloquearInput() {
+  document.getElementById('amigo').disabled = true;
+  document.querySelector('.button-add').disabled = true;
+}
+
+function desbloquearInput() {
+  document.getElementById('amigo').disabled = false;
+  document.querySelector('.button-add').disabled = false;
 }

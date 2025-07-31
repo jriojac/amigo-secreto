@@ -32,11 +32,11 @@ body {
 
 /* Banner */
 .header-banner {
-   /* flex: 40%;*/
+    flex: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
-   /* padding: 40px 0 0;*/
+   padding: 40px 0 0;
 }
 
 /* Sección principal */
@@ -209,4 +209,12 @@ ul {
     background-color: #ccc;
     color: #666;
     cursor: not-allowed;
+}
+
+.estado-juego {
+  color: #d35400; /* Naranja oscuro */
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1rem;
 }
