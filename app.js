@@ -60,16 +60,14 @@ function sortear() {
   const indice = Math.floor(Math.random() * lista.length);
   const ganador = lista[indice];
 
-  resultado.innerHTML = `<li class="success">🎉 ${ganador} ha sido sorteado como tu amigo secreto 🎁</li>`;
+  resultado.innerHTML = `<li class="success">🎁🎉 ${ganador} ha sido sorteado como tu amigo secreto 🎁</li>`;
 
   document.getElementById('btnReiniciar').disabled = false;
   document.getElementById('btnSortear').disabled = true;
   
 
-  document.getElementById('estadoJuego').textContent = '🎁 El juego está cerrado. Reinicie para volver a jugar.';
+  document.getElementById('estadoJuego').textContent = '🔒 Sorteo finalizado, clik en "Iniciar nuevo juego".🔒';
   bloquearInput();
-
-
 }
 
 function reiniciarJuego() {
