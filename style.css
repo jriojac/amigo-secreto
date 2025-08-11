@@ -1,220 +1,145 @@
-:root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
-    --color-text: #444444;
-    --color-white: #FFFFFF;
-}
 
-/* Reset y configuraciones base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Tipografía base */
 body {
-    height: 100vh;
-    background-color: var(--color-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgba(255, 250, 247, 0.9), rgba(255, 250, 247, 0.9)),
+              url('../assets/amigo-secreto2');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #333;
+  background: url('../assets/mujeres-abstractas.svg') center/cover no-repeat fixed;
 }
 
 .main-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  max-width: 700px;
+  margin: 40px auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  padding: 20px;
 }
 
-/* Banner */
 .header-banner {
-    flex: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   padding: 40px 0 0;
+  text-align: center;
 }
 
-/* Sección principal */
-.input-section {
-    flex: 60%;
-    background-color: var(--color-secondary);
-    border: 1px solid #000;
-    border-radius: 64px 64px 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-    box-shadow: 0 0 10px #ccc;
+.header-banner img {
+  max-width: 150px;
 }
 
-/* Títulos */
 .main-title {
-    font-size: 48px;
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: italic;
-    color: var(--color-white);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #e63946;
+  margin-bottom: 10px;
 }
 
 .section-title {
-    font-family: "Inter", sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin: 10px 0;
-    text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #1d3557;
 }
 
-/* Input + botón agregar */
 .input-wrapper {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    width: 100%;
-    max-width: 600px;
-    margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
 .input-name {
-    flex: 1;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #000;
-    border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  flex: 1;
+  padding: 8px;
+  border: 2px solid #457b9d;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
 .button-add {
-    background-color: #007acc;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-family: "Inter", sans-serif;
-    border-radius: 0 25px 25px 0;
-    cursor: pointer;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .button-add:hover {
-    background-color: #005fa3;
+  background-color: #d62828;
 }
 
-/* Mensajes */
 .mensaje-error {
-    color: red;
-    font-weight: bold;
-    margin: 5px 0 10px;
-     font-size: 1.2rem;
-}
-
-.success {
-  color: #19693a; 
+  color: red;
   font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  list-style: none;
-}
-
-.contador {
-    font-weight: bold;
-    margin-top: 10px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Listas */
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    font-family: "Inter", sans-serif;
-}
-
-.name-list li,
-.result-list li {
-    background-color: #eee;
-    font-size: 1.1rem;
-    padding: 8px 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    color: var(--color-text);
-    text-align: center;
-}
-
-.result-list {
-    color: #05DF05;
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-/* Contenedor de botones */
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-/* Botón sortear e iniciar */
-.button-draw {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 40px;
-    font-size: 16px;
-    font-family: "Inter", sans-serif;
-    background-color: var(--color-button);
-    color: var(--color-white);
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.button-draw:hover {
-    background-color: var(--color-button-hover);
-}
-
-.button-draw:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.button-draw img {
-    margin-right: 10px;
-}
-
-/* Botón reiniciar */
-.button-reset {
-    padding: 10px 20px;
-    background-color: #004aad;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.button-reset:disabled {
-    background-color: #ccc;
-    color: #666;
-    cursor: not-allowed;
+  margin-bottom: 8px;
 }
 
 .estado-juego {
-  color: #d35400; /* Naranja oscuro */
   font-weight: bold;
-  text-align: center;
+  color: #1d3557;
+  margin: 10px 0;
+}
+
+.name-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.name-list li {
+  padding: 5px;
+  background-color: #f1faee;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.success {
+  background-color: #a8dadc;
+  border-radius: 8px;
+  padding: 8px;
+  list-style: none;
+  margin-top: 15px;
+}
+
+.success li {
+  background-color: white;
+  border-radius: 5px;
+  padding: 6px;
+  margin: 4px 0;
+  font-weight: bold;
+  color: #1d3557;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.button-draw {
+  background-color: #457b9d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.button-draw:hover {
+  background-color: #1d3557;
+}
+
+.contador {
   margin-top: 10px;
-  font-size: 1rem;
+  font-weight: bold;
 }
